@@ -6,15 +6,15 @@
   "scripts": {
     "build": "sass scss/main.scss:css/main.css",
     "watch": "sass --watch scss/main.scss:css/main.css",
-    "serve": "http-server --proxy http://localhost:8080",
+    "serve": "live-server --port=8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Barrett Otte",
   "license": "MIT",
-  "devDependencies": {
-    "http-server": "^14.1.1"
-  },
   "dependencies": {
     "sass": "^1.54.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
