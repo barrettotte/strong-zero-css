@@ -64,18 +64,15 @@ body {
   width: 200px;
   height: 20px;
   font-family: sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 900;
-  letter-spacing: 3px;
-  text-align: center;
-  transform: rotate(-15deg) scale(1, 1) translate(-5px);
+  letter-spacing: -0.5px;
 }
 .subtitle::before {
-  content: "ダブルレモン";
-}
-.subtitle::after {
   position: absolute;
-  content: "";
+  content: "ダブルレモン";
+  transform: rotate(-15deg);
+  translate: 40px 0px;
 }
 
 .ribbon {
@@ -97,17 +94,48 @@ body {
 
 .abv {
   font-family: "Lato", sans-serif;
-  color: #F0E545;
   width: 200px;
   height: 75px;
-  margin-left: 90px;
-  margin-top: 15px;
-  font-size: 80px;
-  font-weight: 900;
+  margin-left: 105px;
+  margin-top: 10px;
   transform: scale(0.75, 1.1);
 }
 .abv::before {
+  position: absolute;
   content: "9";
+  color: #F0E545;
+  font-size: 80px;
+  font-weight: 900;
+}
+.abv::after {
+  position: absolute;
+  content: "アルコール";
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  translate: 2px 80px;
+}
+
+.abv-label {
+  color: white;
+  letter-spacing: 2.5px;
+  font-family: "Fjalla One", sans-serif;
+}
+.abv-label::before {
+  position: absolute;
+  content: "ALC.";
+  font-size: 14px;
+  font-weight: 100;
+  translate: 52px 42px;
+}
+.abv-label::after {
+  position: absolute;
+  content: "%";
+  font-size: 22px;
+  font-weight: 100;
+  translate: 56px 57px;
+  scale: 150% 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

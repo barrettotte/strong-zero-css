@@ -71,18 +71,15 @@ body {
     width: $can-width;
     height: 20px;
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 900;
-    letter-spacing: 3px;
-    text-align: center;
-    transform: rotate(-15deg) scale(1, 1) translate(-5px);
+    letter-spacing: -0.5px;
 
     &::before {
-        content: "ダブルレモン";
-    }
-    &::after {
         position: absolute;
-        content: "";
+        content: "ダブルレモン"; // Dabururemon (double lemon)
+        transform: rotate(-15deg);
+        translate: 40px 0px;
     }
 }
 
@@ -105,16 +102,48 @@ body {
 
 .abv {
     font-family: 'Lato', sans-serif;
-    color: $strong-yellow;
     width: $can-width;
     height: 75px;
-    margin-left: 90px;
-    margin-top: 15px;
-    font-size: 80px;
-    font-weight: 900;
+    margin-left: 105px;
+    margin-top: 10px;
     transform: scale(0.75, 1.1);
 
     &::before {
+        position: absolute;
         content: "9";
+        color: $strong-yellow;
+        font-size: 80px;
+        font-weight: 900;
+    }
+    &::after {
+        position: absolute;
+        content: "アルコール";  // Arukōru (alcohol)
+        color: white;
+        font-size: 14px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        translate: 2px 80px;
+    }
+}
+
+.abv-label {
+    color: white;
+    letter-spacing: 2.5px;
+    font-family: 'Fjalla One', sans-serif;
+    
+    &::before {
+        position: absolute;
+        content: "ALC.";
+        font-size: 14px;
+        font-weight: 100;
+        translate: 52px 42px;
+    }
+    &::after {
+        position: absolute;
+        content: "%";
+        font-size: 22px;
+        font-weight: 100;
+        translate: 56px 57px;
+        scale: 150% 100%
     }
 }
