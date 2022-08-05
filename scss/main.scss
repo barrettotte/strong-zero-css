@@ -122,7 +122,7 @@ body {
         font-size: 14px;
         font-weight: 900;
         letter-spacing: 2px;
-        translate: 2px 80px;
+        translate: 4px 80px;
     }
 }
 
@@ -136,14 +136,62 @@ body {
         content: "ALC.";
         font-size: 14px;
         font-weight: 100;
-        translate: 52px 42px;
+        translate: 56px 42px;
     }
     &::after {
         position: absolute;
         content: "%";
         font-size: 22px;
         font-weight: 100;
-        translate: 56px 57px;
+        translate: 60px 57px;
         scale: 150% 100%
+    }
+}
+
+.suntory {
+    position: absolute;
+    color: white;
+    border: 1px solid white;
+    height: 50px;
+    width: 60px;
+    translate: 55px -10px;
+    
+    &::before {
+        position: absolute;
+        content: "SUNTORY";
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: 2.0px;
+        scale: 100% 75%;
+        translate: 9px 0px;
+    }
+    &::after {
+        position: absolute;
+        content: "-196°c";
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+        scale: 75% 100%;
+        translate: -7px 8px;
+    }
+}
+
+.suntory-bottom {
+    position: absolute;
+    color: white;
+    background-color: rgb(230, 44, 44);
+    width: 100%;
+    height: 14px;
+    border-top: 1px solid white;
+    translate: 0px 35px;
+
+    &::before {
+        position: absolute;
+        content: "糖類ゼロ."; // zero saccharides (sugar)
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        scale: 100% 75%;
+        translate: 6px -1px;
     }
 }
