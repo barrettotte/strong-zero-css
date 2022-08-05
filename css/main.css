@@ -28,7 +28,6 @@ body {
   position: absolute;
   width: 200px;
   height: 75px;
-  border-bottom: 2px magenta dashed;
 }
 .can::after {
   content: "";
@@ -36,14 +35,13 @@ body {
   width: 200px;
   height: 25px;
   bottom: 0;
-  border-top: 2px magenta dashed;
 }
 
 .title {
   color: black;
   width: 200px;
   height: 50px;
-  margin-top: 150px;
+  margin-top: 130px;
   margin-left: 25px;
   margin-bottom: 85px;
   font-size: 55px;
@@ -52,7 +50,7 @@ body {
   letter-spacing: 1px;
   line-height: 55px;
   text-align: center;
-  transform: rotate(-15deg) translateX(-30px);
+  transform: rotate(-12.5deg) translateX(-30px);
 }
 .title::before {
   content: "STRONG ZERO";
@@ -71,24 +69,24 @@ body {
 .subtitle::before {
   position: absolute;
   content: "ダブルレモン";
-  transform: rotate(-15deg);
-  translate: 40px 0px;
+  transform: rotate(-12.5deg);
+  translate: 40px -2.5px;
 }
 
 .ribbon {
   position: absolute;
   width: 200px;
-  height: 90px;
-  margin-top: -32px;
+  height: 80px;
+  margin-top: -30px;
   background-color: #F0E545;
-  clip-path: polygon(0 45px, 200px 0, 200px 45px, 0 90px);
+  clip-path: polygon(0 40px, 200px 0, 200px 40px, 0 80px);
 }
 
 .can-bottom {
   position: absolute;
-  height: 180px;
+  height: 200px;
   width: 200px;
-  margin-top: 13px;
+  margin-top: 10px;
   background-color: black;
 }
 
@@ -96,7 +94,7 @@ body {
   font-family: "Lato", sans-serif;
   width: 200px;
   height: 75px;
-  margin-left: 105px;
+  margin-left: 112px;
   margin-top: 10px;
   transform: scale(0.75, 1.1);
 }
@@ -105,36 +103,37 @@ body {
   content: "9";
   color: #F0E545;
   font-size: 80px;
-  font-weight: 900;
+  font-weight: 100;
 }
 .abv::after {
   position: absolute;
-  content: "アルコール";
+  content: "アルコール分";
   color: white;
   font-size: 14px;
   font-weight: 900;
-  letter-spacing: 2px;
-  translate: 4px 80px;
+  letter-spacing: 0.5px;
+  scale: 75% 95%;
+  translate: 0px 78px;
 }
 
 .abv-label {
   color: white;
   letter-spacing: 2.5px;
   font-family: "Fjalla One", sans-serif;
+  font-weight: 100;
 }
 .abv-label::before {
   position: absolute;
   content: "ALC.";
   font-size: 14px;
-  font-weight: 100;
-  translate: 56px 42px;
+  translate: 47px 42px;
 }
 .abv-label::after {
   position: absolute;
   content: "%";
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 100;
-  translate: 60px 57px;
+  translate: 52px 57px;
   scale: 150% 100%;
 }
 
@@ -142,27 +141,27 @@ body {
   position: absolute;
   color: white;
   border: 1px solid white;
-  height: 50px;
-  width: 60px;
-  translate: 55px -10px;
+  height: 40px;
+  width: 50px;
+  translate: 70px 2.5px;
 }
 .suntory::before {
   position: absolute;
   content: "SUNTORY";
-  font-size: 9px;
+  font-size: 7px;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   scale: 100% 75%;
-  translate: 9px 0px;
+  translate: 9px 1px;
 }
 .suntory::after {
   position: absolute;
   content: "-196°c";
   font-family: "Lato", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 900;
   scale: 75% 100%;
-  translate: -7px 8px;
+  translate: -3px 6px;
 }
 
 .suntory-bottom {
@@ -170,18 +169,113 @@ body {
   color: white;
   background-color: rgb(230, 44, 44);
   width: 100%;
-  height: 14px;
+  height: 11px;
   border-top: 1px solid white;
-  translate: 0px 35px;
+  translate: 0px 28px;
 }
 .suntory-bottom::before {
   position: absolute;
   content: "糖類ゼロ.";
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 900;
+  letter-spacing: 1.75px;
+  scale: 100% 80%;
+  translate: 5px -1px;
+}
+
+.bottom-circle {
+  position: absolute;
+  color: black;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  font-weight: 900;
+  border-radius: 25px;
+  overflow: visible;
+  translate: 4px 40px;
+}
+.bottom-circle::before {
+  position: absolute;
+  content: "さけ";
+  font-size: 8px;
+  translate: 27px 5px;
+  scale: 80% 100%;
+}
+.bottom-circle::after {
+  color: black;
+  position: absolute;
+  content: "お酒";
+  font-size: 23px;
+  translate: 0px 9px;
+  scale: 70% 100%;
   letter-spacing: 2px;
-  scale: 100% 75%;
-  translate: 6px -1px;
+}
+
+.bottom-text {
+  position: absolute;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  height: 25px;
+  width: 100%;
+  bottom: 0;
+}
+.bottom-text::before {
+  position: absolute;
+  content: "";
+}
+.bottom-text::after {
+  position: absolute;
+  content: "プリン体ゼロヰ";
+  translate: 136px -8px;
+  letter-spacing: 1.25px;
+  font-weight: 100;
+  font-size: 9px;
+  scale: 65% 100%;
+}
+
+.bottom-text-left {
+  position: absolute;
+  color: white;
+  width: 250px;
+}
+.bottom-text-left::before {
+  position: absolute;
+  content: "チューハイ";
+  font-size: 12px;
+  letter-spacing: 0.1px;
+  translate: -12px 0px;
+  scale: 50% 100%;
+}
+.bottom-text-left::after {
+  position: absolute;
+  content: "スピリッツ(発泡性)①";
+  letter-spacing: 0.25px;
+  font-weight: 100;
+  font-size: 9px;
+  translate: 23px 3px;
+  scale: 65% 100%;
+}
+
+.bottom-text-right {
+  position: absolute;
+  color: white;
+  width: 250px;
+  font-weight: 100;
+  font-size: 9px;
+  letter-spacing: 0.1px;
+  scale: 65% 100%;
+}
+.bottom-text-right::before {
+  position: absolute;
+  content: "レモン果汁3%";
+  translate: 92px 4px;
+}
+.bottom-text-right::after {
+  position: absolute;
+  content: "レモン浸漬ル使用";
+  translate: 160px 4px;
 }
 
 /*# sourceMappingURL=main.css.map */
