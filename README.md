@@ -1,13 +1,14 @@
 # strong-zero-css-art
 
-A quick CSS art of a Strong Zero can.
+A subpar CSS art of a Strong Zero can.
 
 I always wanted to make some sort of "CSS art" of something dumb.
 
 ## Commands
 
 - Install dependencies - `npm i`
-- Live reload - `npm run watch:sass`
+- Live reload - `npm run serve`
+- Watch SCSS - `npm run watch`
 
 ## References
 
