@@ -4,62 +4,139 @@
 }
 
 body {
-  background-color: #575858;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  margin: 0;
+  background-color: #ffffff;
 }
 
 .container {
+  margin-top: 10%;
   display: flex;
   justify-content: center;
   position: relative;
 }
 
 .can {
-  display: absolute;
-  background-color: #cdcdcd;
-  width: 200px;
-  height: 500px;
+  position: absolute;
+  width: 225px;
+  height: 575px;
 }
 .can::before {
-  content: "";
   position: absolute;
-  width: 200px;
+  content: "";
+  width: 100%;
   height: 75px;
+  background-color: #9d9d9d;
+  clip-path: polygon(5% 0, 95% 0, 100% 12.5px, 0 12.5px);
 }
 .can::after {
-  content: "";
   position: absolute;
-  width: 200px;
+  content: "";
+  width: 100%;
   height: 25px;
-  bottom: 0;
+  bottom: -5px;
+  background-color: #9d9d9d;
+  clip-path: polygon(0 0, 100% 0, 95% 15px, 5% 15px);
+}
+
+.can-fill {
+  position: absolute;
+  background-color: #e1e1e1;
+  margin-top: 12.5px;
+  width: 100%;
+  height: 400px;
+}
+
+.lemons {
+  margin-top: 55px;
+  margin-left: 10px;
+}
+
+.lemon-left {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  translate: 20px 30px;
+  border-radius: 50%;
+  background-color: #F0E545;
+  rotate: -15deg;
+  border: 6px solid white;
+  box-shadow: 0px 0px 0px 5px #F0E545, 0px 0px 0px 6px #e5d812, 8px 0px 0px 5px #ded112;
+}
+.lemon-left::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border: 5px solid white;
+  translate: 35px 35px;
+}
+
+.lemon-left-lines {
+  translate: -2.5px 42.5px;
+}
+.lemon-left-lines div:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border: 2.25px solid white;
+}
+.lemon-left-lines div:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border: 2.25px solid white;
+  rotate: 45deg;
+}
+.lemon-left-lines div:nth-child(3) {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border: 2.25px solid white;
+  rotate: 90deg;
+}
+.lemon-left-lines div:nth-child(4) {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border: 2.25px solid white;
+  rotate: 135deg;
+}
+
+.lemon-right {
+  position: absolute;
+  width: 100px;
+  height: 125px;
+  translate: 80px -5px;
+  border-radius: 75px;
+  background-color: #F0E545;
+  rotate: -15deg;
+  box-shadow: 0px -40px 0px -31px #F0E545, 0px 40px 0px -31px #F0E545;
 }
 
 .title {
   color: black;
-  width: 200px;
+  width: 225px;
   height: 50px;
-  margin-top: 130px;
-  margin-left: 25px;
-  margin-bottom: 85px;
+  margin-top: 205px;
+  margin-bottom: 80px;
   font-size: 55px;
   font-weight: 900;
   text-shadow: 1px 0px 1px black;
   letter-spacing: 1px;
   line-height: 55px;
   text-align: center;
-  transform: rotate(-12.5deg) translateX(-30px);
+  transform: rotate(-10deg) translateX(-90px);
 }
 .title::before {
+  position: absolute;
   content: "STRONG ZERO";
 }
 
 .subtitle {
   position: absolute;
   color: black;
-  width: 200px;
+  width: 225px;
   height: 20px;
   font-family: sans-serif;
   font-size: 18px;
@@ -69,32 +146,32 @@ body {
 .subtitle::before {
   position: absolute;
   content: "ダブルレモン";
-  transform: rotate(-12.5deg);
-  translate: 40px -2.5px;
+  transform: rotate(-10deg);
+  translate: 50px 0px;
 }
 
 .ribbon {
   position: absolute;
-  width: 200px;
+  width: 225px;
   height: 80px;
   margin-top: -30px;
   background-color: #F0E545;
-  clip-path: polygon(0 40px, 200px 0, 200px 40px, 0 80px);
+  clip-path: polygon(0 40px, 225px 0, 225px 40px, 0 80px);
 }
 
 .can-bottom {
   position: absolute;
-  height: 200px;
-  width: 200px;
+  height: 210px;
+  width: 225px;
   margin-top: 10px;
   background-color: black;
 }
 
 .abv {
   font-family: "Lato", sans-serif;
-  width: 200px;
+  width: 225px;
   height: 75px;
-  margin-left: 112px;
+  margin-left: 130px;
   margin-top: 10px;
   transform: scale(0.75, 1.1);
 }
@@ -143,7 +220,7 @@ body {
   border: 1px solid white;
   height: 40px;
   width: 50px;
-  translate: 70px 2.5px;
+  translate: 82.5px -5px;
 }
 .suntory::before {
   position: absolute;
@@ -192,7 +269,7 @@ body {
   font-weight: 900;
   border-radius: 25px;
   overflow: visible;
-  translate: 4px 40px;
+  translate: 8px 42.5px;
 }
 .bottom-circle::before {
   position: absolute;
@@ -202,7 +279,6 @@ body {
   scale: 80% 100%;
 }
 .bottom-circle::after {
-  color: black;
   position: absolute;
   content: "お酒";
   font-size: 23px;
@@ -219,7 +295,7 @@ body {
   font-size: 10px;
   height: 25px;
   width: 100%;
-  bottom: 0;
+  bottom: 5px;
 }
 .bottom-text::before {
   position: absolute;
@@ -228,10 +304,10 @@ body {
 .bottom-text::after {
   position: absolute;
   content: "プリン体ゼロヰ";
-  translate: 136px -8px;
+  translate: 154px -10px;
   letter-spacing: 1.25px;
   font-weight: 100;
-  font-size: 9px;
+  font-size: 10px;
   scale: 65% 100%;
 }
 
@@ -243,18 +319,18 @@ body {
 .bottom-text-left::before {
   position: absolute;
   content: "チューハイ";
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.1px;
   translate: -12px 0px;
   scale: 50% 100%;
 }
 .bottom-text-left::after {
   position: absolute;
-  content: "スピリッツ(発泡性)①";
+  content: "スピリッツ(発泡性) ①";
   letter-spacing: 0.25px;
   font-weight: 100;
-  font-size: 9px;
-  translate: 23px 3px;
+  font-size: 10px;
+  translate: 28px 3.5px;
   scale: 65% 100%;
 }
 
@@ -263,19 +339,19 @@ body {
   color: white;
   width: 250px;
   font-weight: 100;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.1px;
   scale: 65% 100%;
 }
 .bottom-text-right::before {
   position: absolute;
   content: "レモン果汁3%";
-  translate: 92px 4px;
+  translate: 115px 3.5px;
 }
 .bottom-text-right::after {
   position: absolute;
   content: "レモン浸漬ル使用";
-  translate: 160px 4px;
+  translate: 190px 3.5px;
 }
 
 /*# sourceMappingURL=main.css.map */

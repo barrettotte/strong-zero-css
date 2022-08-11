@@ -7,6 +7,7 @@
     "build": "sass scss/main.scss:css/main.css",
     "watch": "sass --watch scss/main.scss:css/main.css",
     "serve": "live-server --port=8080",
+    "start": "live-server --port=8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Barrett Otte",

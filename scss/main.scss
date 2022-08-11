@@ -1,7 +1,7 @@
 @use "sass:math";
 
-$can-width: 200px;
-$can-height: 500px;
+$can-width: 225px;
+$can-height: 575px;
 $strong-yellow: #F0E545;
 
 * {
@@ -9,58 +9,140 @@ $strong-yellow: #F0E545;
 }
 
 body {
-    background-color: #575858;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    margin: 0;
+    background-color: #ffffff;
 }
 
 .container {
+    margin-top: 10%;
     display: flex;
     justify-content: center;
     position: relative;
 }
 
 .can {
-    display: absolute;
-    background-color: #cdcdcd;
+    position: absolute;
     width: $can-width;
     height: $can-height;
 
     &::before {
-        content: "";
         position: absolute;
-        width: $can-width;
+        content: "";
+        width: 100%;
         height: 75px;
-        // border-bottom: 2px magenta dashed;
+        background-color: #9d9d9d;
+        clip-path: polygon(5% 0, 95% 0, 100% 12.5px, 0 12.5px);
     }
     &::after {
-        content: "";
         position: absolute;
-        width: $can-width;
+        content: "";
+        width: 100%;
         height: 25px;
-        bottom: 0;
-        // border-top: 2px magenta dashed;
+        bottom: -5px;
+        background-color: #9d9d9d;
+        clip-path: polygon(0 0, 100% 0, 95% 15px, 5% 15px);
     }
+}
+
+.can-fill {
+    position: absolute;
+    background-color: #e1e1e1;
+    margin-top: 12.5px;
+    width: 100%;
+    height: 400px;
+}
+
+.lemons {
+    margin-top: 55px;
+    margin-left: 10px;
+}
+
+.lemon-left {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    translate: 20px 30px;
+    border-radius: 50%;
+    background-color: $strong-yellow;
+    rotate: -15deg;
+    border: 6px solid white;
+    box-shadow:
+        0px 0px 0px 5px $strong-yellow,
+        0px 0px 0px 6px darken($color: $strong-yellow, $amount: 12%),
+        8px 0px 0px 5px darken($color: $strong-yellow, $amount: 13.5%);
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: white;
+        border: 5px solid white;
+        translate: 35px 35px;
+    }
+}
+
+.lemon-left-lines {
+    translate: -2.5px 42.5px;
+
+    div:nth-child(1) {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        border: 2.25px solid white;
+    }
+    div:nth-child(2) {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        border: 2.25px solid white;
+        rotate: 45deg;
+    }
+    div:nth-child(3) {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        border: 2.25px solid white;
+        rotate: 90deg;
+    }
+    div:nth-child(4) {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        border: 2.25px solid white;
+        rotate: 135deg;
+    }
+}
+
+.lemon-right {
+    position: absolute;
+    width: 100px;
+    height: 125px;
+    translate: 80px -5px;
+    border-radius: 75px;
+    background-color: $strong-yellow;
+    rotate: -15deg;
+    box-shadow:
+        0px -40px 0px -31px $strong-yellow,
+        0px 40px 0px -31px $strong-yellow;
 }
 
 .title {
     color: black;
     width: $can-width;
     height: 50px;
-    margin-top: 130px;
-    margin-left: 25px;
-    margin-bottom: 85px;
+    margin-top: 205px;
+    margin-bottom: 80px;
     font-size:  55px;
     font-weight: 900;
     text-shadow: 1px 0px 1px black;
     letter-spacing: 1px;
     line-height: 55px;
     text-align: center;
-    transform: rotate(-12.5deg) translateX(-30px);
+    transform: rotate(-10deg) translateX(-90px);
 
     &::before {
+        position: absolute;
         content: "STRONG ZERO";
     }
 }
@@ -78,8 +160,8 @@ body {
     &::before {
         position: absolute;
         content: "ダブルレモン"; // double lemon
-        transform: rotate(-12.5deg);
-        translate: 40px -2.5px;
+        transform: rotate(-10deg);
+        translate: 50px 0px;
     }
 }
 
@@ -94,7 +176,7 @@ body {
 
 .can-bottom {
     position: absolute;
-    height: 200px;
+    height: 210px;
     width: $can-width;
     margin-top: 10px;
     background-color: black;
@@ -104,7 +186,7 @@ body {
     font-family: 'Lato', sans-serif;
     width: $can-width;
     height: 75px;
-    margin-left: 112px;
+    margin-left: 130px;
     margin-top: 10px;
     transform: scale(0.75, 1.1);
 
@@ -117,7 +199,7 @@ body {
     }
     &::after {
         position: absolute;
-        content: "アルコール分";  // alcohol content
+        content: "アルコール分"; // alcohol content
         color: white;
         font-size: 14px;
         font-weight: 900;
@@ -155,8 +237,8 @@ body {
     border: 1px solid white;
     height: 40px;
     width: 50px;
-    translate: 70px 2.5px;
-    
+    translate: 82.5px -5px;
+
     &::before {
         position: absolute;
         content: "SUNTORY";
@@ -206,7 +288,7 @@ body {
     font-weight: 900;
     border-radius: 25px;
     overflow: visible;
-    translate: 4px 40px;
+    translate: 8px 42.5px;
 
     &::before {
         position: absolute;
@@ -216,7 +298,6 @@ body {
         scale: 80% 100%;
     }
     &::after {
-        color: black;
         position: absolute;
         content: "お酒"; // sake
         font-size: 23px;
@@ -234,7 +315,7 @@ body {
     font-size: 10px;
     height: 25px;
     width: 100%;
-    bottom: 0;
+    bottom: 5px;
 
     &::before {
         position: absolute;
@@ -243,10 +324,10 @@ body {
     &::after {
         position: absolute;
         content: "プリン体ゼロヰ"; // zero purines
-        translate: 136px -8px;
+        translate: 154px -10px;
         letter-spacing: 1.25px;
         font-weight: 100;
-        font-size: 9px;
+        font-size: 10px;
         scale: 65% 100%;
     }
 }
@@ -259,18 +340,18 @@ body {
     &::before {
         position: absolute;
         content: "チューハイ"; // chuhai
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 0.1px;
         translate: -12px 0px;
         scale: 50% 100%;
     }
     &::after {
         position: absolute;
-        content: "スピリッツ(発泡性)①"; // spirits(effervescent)
+        content: "スピリッツ(発泡性) ①"; // spirits(effervescent)
         letter-spacing: 0.25px;
         font-weight: 100;
-        font-size: 9px;
-        translate: 23px 3px;
+        font-size: 10px;
+        translate: 28px 3.5px;
         scale: 65% 100%;
     }
 }
@@ -280,18 +361,18 @@ body {
     color: white;
     width: 250px;
     font-weight: 100;
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 0.1px;
     scale: 65% 100%;
 
     &::before {
         position: absolute;
         content: "レモン果汁3%"; // lemon fruit juice 3%
-        translate: 92px 4px;
+        translate: 115px 3.5px;
     }
     &::after {
         position: absolute;
         content: "レモン浸漬ル使用"; // lemon immersion alcohol use
-        translate: 160px 4px;
+        translate: 190px 3.5px;
     }
 }
