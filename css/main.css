@@ -147,7 +147,7 @@ body {
   position: absolute;
   content: "ダブルレモン";
   transform: rotate(-10deg);
-  translate: 50px 0px;
+  translate: 55px -2.5px;
 }
 
 .ribbon {
